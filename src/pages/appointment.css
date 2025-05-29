@@ -64,3 +64,20 @@
 .doctor-card button:hover {
   background-color: #3749b1;
 }
+.rating {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #ffc107;
+  display: flex;
+  align-items: center;
+}
+
+.rating .star.empty {
+  color: #ddd;
+}
+
+.rating-number {
+  font-size: 0.9rem;
+  color: #555;
+  margin-left: 0.3rem;
+}
