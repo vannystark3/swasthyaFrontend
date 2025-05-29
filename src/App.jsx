@@ -26,7 +26,6 @@ const AppContent = ({ loggedIn, setLoggedIn }) => {
 
   return (
     <>
-      {/* Show NavBar only when not login or doctor */}
       {!isLoginPage && !isDoctorPage && <NavBar loggedIn={loggedIn} />}
       {/* {isDoctorPage && <DoctorNavbar />} */}
 
@@ -39,12 +38,9 @@ const AppContent = ({ loggedIn, setLoggedIn }) => {
           <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
           <Route path="/profile" element={<Profile onLogout={handleLogout} />} />
 
-          {/* Doctor-only route */}
           <Route path="/doctorDashboard" element={<DoctorDashboard />} />
         </Routes>
       </div>
-
-      {/* Show footer only when not on doctor pages or login */}
       {!isLoginPage && !isDoctorPage && <Footer />}
     </>
   );

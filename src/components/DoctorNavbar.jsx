@@ -11,7 +11,7 @@ const DoctorNavbar = () => {
         <h2>Doctor Panel</h2>
       </div>
       <ul className="doctor-nav-links">
-        <li className={location.pathname === '/doctor/dashboard' ? 'active' : ''}>
+        <li className={location.pathname === '/doctorDashboard' ? 'active' : ''}>
           <Link to="/doctor/dashboard">Consultations</Link>
         </li>
         <li className={location.pathname === '/doctor/appointments' ? 'active' : ''}>

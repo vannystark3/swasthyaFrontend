@@ -25,7 +25,7 @@ const Login = ({ setLoggedIn }) => {
       if (role === 'patient') {
         navigate('/');
       } else {
-        navigate('./doctorDashboard.jsx');
+        navigate('/doctorDashboard');
       }
     } else {
       setError(data.message || 'Login failed');
