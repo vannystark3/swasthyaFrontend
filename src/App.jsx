@@ -40,7 +40,7 @@ const AppContent = ({ loggedIn, setLoggedIn }) => {
           <Route path="/profile" element={<Profile onLogout={handleLogout} />} />
 
           {/* Doctor-only route */}
-          <Route path="/doctor/dashboard" element={<DoctorDashboard />} />
+          <Route path="/doctorDashboard" element={<DoctorDashboard />} />
         </Routes>
       </div>
 
