@@ -25,7 +25,7 @@ const NavBar = ({ loggedIn }) => {
           </li>
           <li>
             <Link to="/about" className="navbar-link">
-              About Us
+              Appointment
             </Link>
           </li>
           <li>
