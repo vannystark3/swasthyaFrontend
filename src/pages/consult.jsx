@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import jsPDF from 'jspdf';
 import './Consult.css';
 
 const questionSets = {
@@ -150,7 +149,7 @@ const Consult = () => {
             </div>
           ) : (
             <div className="download-btn">
-              <button onClick={generatePDFReport}>Download Report as PDF</button>
+              <button>Download Report as PDF</button>
             </div>
           )}
         </div>
