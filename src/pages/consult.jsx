@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import jsPDF from 'jspdf';
+// import jsPDF from 'jspdf';
 import './Consult.css';
 
 const questionSets = {
@@ -81,46 +81,46 @@ const Consult = () => {
     }
   };
 
-  const generatePDFReport = () => {
-    const doc = new jsPDF();
-    const date = new Date().toLocaleString();
+  // const generatePDFReport = () => {
+  //   const doc = new jsPDF();
+  //   const date = new Date().toLocaleString();
 
-    doc.setFontSize(18);
-    doc.text('Patient Symptom Report', 20, 20);
+  //   doc.setFontSize(18);
+  //   doc.text('Patient Symptom Report', 20, 20);
 
-    doc.setFontSize(12);
-    doc.text(`Generated on: ${date}`, 20, 28);
+  //   doc.setFontSize(12);
+  //   doc.text(`Generated on: ${date}`, 20, 28);
 
-    doc.setFontSize(14);
-    doc.text('Patient Information:', 20, 40);
+  //   doc.setFontSize(14);
+  //   doc.text('Patient Information:', 20, 40);
 
-    doc.setFontSize(12);
-    doc.text(`Patient ID: ${patientInfo.id}`, 20, 48);
-    doc.text(`Name: ${patientInfo.name}`, 20, 56);
-    doc.text(`Age: ${patientInfo.age}`, 20, 64);
-    doc.text(`Gender: ${patientInfo.gender}`, 20, 72);
-    doc.text(`Urgency Status: ${patientInfo.urgency ? 'Urgent' : 'Not Urgent'}`, 20, 80);
-    doc.text(`Consulted Doctor Type: ${doctorType}`, 20, 88);
+  //   doc.setFontSize(12);
+  //   doc.text(`Patient ID: ${patientInfo.id}`, 20, 48);
+  //   doc.text(`Name: ${patientInfo.name}`, 20, 56);
+  //   doc.text(`Age: ${patientInfo.age}`, 20, 64);
+  //   doc.text(`Gender: ${patientInfo.gender}`, 20, 72);
+  //   doc.text(`Urgency Status: ${patientInfo.urgency ? 'Urgent' : 'Not Urgent'}`, 20, 80);
+  //   doc.text(`Consulted Doctor Type: ${doctorType}`, 20, 88);
 
-    doc.setFontSize(14);
-    doc.text('Symptom Responses:', 20, 100);
+  //   doc.setFontSize(14);
+  //   doc.text('Symptom Responses:', 20, 100);
 
-    let y = 110;
-    Object.entries(responses).forEach(([question, answer], i) => {
-      doc.setFontSize(12);
-      doc.text(`${i + 1}. ${question} : ${answer}`, 20, y);
-      y += 10;
-      if (y > 270) {
-        doc.addPage();
-        y = 20;
-      }
-    });
+  //   let y = 110;
+  //   Object.entries(responses).forEach(([question, answer], i) => {
+  //     doc.setFontSize(12);
+  //     doc.text(`${i + 1}. ${question} : ${answer}`, 20, y);
+  //     y += 10;
+  //     if (y > 270) {
+  //       doc.addPage();
+  //       y = 20;
+  //     }
+  //   });
 
-    doc.setFontSize(10);
-    doc.text("Note: This is a preliminary symptom report. Please consult a healthcare provider for clinical evaluation.", 20, y + 10);
+  //   doc.setFontSize(10);
+  //   doc.text("Note: This is a preliminary symptom report. Please consult a healthcare provider for clinical evaluation.", 20, y + 10);
 
-    doc.save(`${patientInfo.name.replace(" ", "_")}_report.pdf`);
-  };
+  //   doc.save(`${patientInfo.name.replace(" ", "_")}_report.pdf`);
+  // };
 
   const currentQuestion = doctorType && questionFlow[currentQIndex];
 
