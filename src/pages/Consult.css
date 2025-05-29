@@ -1,0 +1,123 @@
+.consult-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f4f7fb;
+  padding: 20px;
+}
+
+.chat-box {
+  width: 100%;
+  max-width: 600px;
+  height: 450px; 
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+
+.chat-header {
+  background-color: #3498db;
+  color: white;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.status-dot {
+  background: limegreen;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.chat-messages {
+  flex: 1 1 auto;
+  padding: 16px;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+  background-color: #fafafa;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 20px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 1rem;
+}
+
+.message.bot {
+  background-color: black;
+  align-self: flex-start;
+}
+
+.message.user {
+  background-color:#2980b9;
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  gap: 10px;
+  flex-shrink: 0;
+  background: white;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.chat-input button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #2980b9;
+}
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.options-container button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.options-container button:hover {
+  background-color: #2980b9;
+}
+

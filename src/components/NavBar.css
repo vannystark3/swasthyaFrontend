@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100vw;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3436;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+.navbar-logo:hover {
+  color: #0984e3; 
+  cursor: pointer;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  font-weight: 500;
+}
+
+.navbar-link {
+  color: #636e72; 
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0984e3; 
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  color: #0984e3;
+  outline: none;
+}
+
+.navbar-link:hover::after,
+.navbar-link:focus::after {
+  width: 100%;
+}
+
+.navbar-user .navbar-link {
+  font-weight: 600;
+  background-color: #0984e3;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-user .navbar-link:hover,
+.navbar-user .navbar-link:focus {
+  background-color: #065aab;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+  .navbar-menu {
+    gap: 18px;
+    font-size: 0.9rem;
+  }
+  .navbar-user .navbar-link {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+}
+.login-link{
+    font-weight: 700;
+    font-size: large;
+}
